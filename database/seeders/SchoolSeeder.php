@@ -22,8 +22,8 @@ class SchoolSeeder extends Seeder
         // Create default admin
         $admin = User::create([
             'name' => 'Administrator',
-            'email' => 'admin@smp.sch.id',
-            'password' => Hash::make('password'),
+            'email' => 'Admin@gmail.com',
+            'password' => Hash::make('Admin1990@'),
             'role' => 'admin',
             'nip' => 'ADM001',
             'address' => 'Jl. Pendidikan No. 1, Jakarta',
@@ -210,7 +210,7 @@ class SchoolSeeder extends Seeder
         }
 
         $this->command->info('School data seeded successfully!');
-        $this->command->info('Admin login: admin@smp.sch.id / password');
+        $this->command->info('Admin login: Admin@gmail.com / Admin1990@');
         $this->command->info('Teacher login: siti@smp.sch.id / password (or any other teacher)');
     }
 }
