@@ -24,10 +24,10 @@ class DashboardController extends Controller
         if (!$user) {
             return Inertia::render('welcome', [
                 'stats' => [
-                    'students' => Student::active()->count(),
-                    'teachers' => User::teachers()->count(),
-                    'subjects' => Subject::active()->count(),
-                    'classes' => SchoolClass::active()->count(),
+                    'students' => Student::where('is_active', true)->count(),
+                    'teachers' => User::where('role', 'guru')->count(),
+                    'subjects' => Subject::where('is_active', true)->count(),
+                    'classes' => SchoolClass::where('is_active', true)->count(),
                 ]
             ]);
         }

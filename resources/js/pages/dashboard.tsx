@@ -1,4 +1,5 @@
 import { Head } from '@inertiajs/react';
+import AppLayout from '@/layouts/app-layout';
 
 interface Props {
     userRole: 'admin' | 'teacher';
@@ -87,7 +88,7 @@ export default function Dashboard({
     };
 
     return (
-        <>
+        <AppLayout>
             <Head title="Dashboard" />
             <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
                 <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -294,6 +295,6 @@ export default function Dashboard({
                     </div>
                 </div>
             </div>
-        </>
+        </AppLayout>
     );
 }
